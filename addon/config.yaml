@@ -1,9 +1,8 @@
 name: Govee to MQTT Bridge
-image: ghcr.io/wez/govee2mqtt-{arch}
-version: "2025.11.25-60a39bcc"
+version: "2025.11.25-jacob-fix"
 slug: govee2mqtt
-description: Control Govee Devices
-url: https://github.com/wez/govee2mqtt
+description: Control Govee Devices - Fixed for H66A1
+url: https://github.com/JacobBratcher/govee2mqtt
 arch:
   - amd64
   - aarch64
@@ -27,7 +26,7 @@ map:
     path: /app/config
 
 options:
-  temperature_scale: "C"
+  temperature_scale: "F"
 
 schema:
   temperature_scale: "str?"
