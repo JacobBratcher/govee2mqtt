@@ -1,9 +1,16 @@
 ARG BUILD_FROM
 ARG BUILD_ARCH
+
+# Pull from Jacob's pre-built image
 FROM ghcr.io/jacobbratcher/govee2mqtt-${BUILD_ARCH}:latest AS govee2mqtt
+
 FROM $BUILD_FROM
+
 COPY run.sh /run.sh
+RUN chmod +x /run.sh
+
 COPY --from=govee2mqtt /app/govee /app/
 COPY --from=govee2mqtt /app/assets /app/assets/
 COPY --from=govee2mqtt /app/AmazonRootCA1.pem /app/
+
 CMD [ "/run.sh" ]
