@@ -2,7 +2,7 @@ name: Govee to MQTT Bridge
 version: "2025.11.25-jacob-fix"
 slug: govee2mqtt
 description: Control Govee Devices - Fixed for H66A1
-url: https://github.com/JacobBratcher/govee2mqtt
+url: https://github.com/jacobbratcher/govee2mqtt
 arch:
   - amd64
   - aarch64
