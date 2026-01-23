@@ -56,7 +56,7 @@ jobs:
           platforms: ${{ matrix.platform }}
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/govee2mqtt-${{ matrix.arch }}:latest
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/govee2mqtt-${{ matrix.arch }}:${{ steps.version.outputs.version }}
+            ghcr.io/jacobbratcher/govee2mqtt-${{ matrix.arch }}:latest
+            ghcr.io/jacobbratcher/govee2mqtt-${{ matrix.arch }}:${{ steps.version.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
